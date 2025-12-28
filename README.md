@@ -24,7 +24,7 @@
 
 1. Клонируйте репозиторий:
 ```bash
-git clone <URL_РЕПОЗИТОРИЯ>
+git clone https://github.com/Oanni/snake.git
 cd snake
 ```
 
@@ -36,7 +36,7 @@ pip install -r requirements.txt
 ## Запуск
 
 ```bash
-python snake_game.py
+python the_snake.py
 ```
 
 ## Управление
@@ -46,7 +46,7 @@ python snake_game.py
 
 ## Структура проекта
 
-- `snake_game.py` - Основной файл с игрой
+- `the_snake.py` - Основной файл с игрой
 - `requirements.txt` - Зависимости проекта
 - `.gitignore` - Игнорируемые файлы для git
 
