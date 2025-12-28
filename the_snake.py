@@ -5,9 +5,10 @@
 которая движется по игровому полю и ест яблоки.
 """
 
-import pygame
 import random
 from typing import List, Tuple
+
+import pygame
 
 # Константы игрового поля
 CELL_SIZE = 20
@@ -64,7 +65,7 @@ class GameObject:
             color: Цвет ячейки (RGB).
         """
         rect = pygame.Rect(position[0], position[1],
-                          CELL_SIZE, CELL_SIZE)
+                           CELL_SIZE, CELL_SIZE)
         pygame.draw.rect(screen, color, rect)
 
     def draw(self, screen: pygame.Surface):
@@ -148,8 +149,8 @@ class Snake(GameObject):
                 LEFT: RIGHT,
                 RIGHT: LEFT
             }
-            if (self.next_direction !=
-                    opposite_directions.get(self.direction)):
+            if (self.next_direction
+                    != opposite_directions.get(self.direction)):
                 self.direction = self.next_direction
             self.next_direction = None
 
@@ -270,7 +271,7 @@ def main():
     # Инициализация Pygame
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-    pygame.display.set_caption("Змейка")
+    pygame.display.set_caption('Змейка')
     clock = pygame.time.Clock()
 
     # Создание игровых объектов
@@ -312,7 +313,7 @@ def main():
             # Обновляем рекорд
             if snake.length > best_length:
                 best_length = snake.length
-                caption = f"Змейка - Рекорд: {best_length}"
+                caption = f'Змейка - Рекорд: {best_length}'
                 pygame.display.set_caption(caption)
             # Перемещаем яблоко на новую позицию
             apple.randomize_position(snake.positions)
@@ -345,6 +346,5 @@ def main():
     pygame.quit()
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
-
